@@ -1,81 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 <title>Insert title here</title>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-
 <style>
-	
-	html, body, div, span, a,ul, li, details{
-		margin: 0;
-		padding: 0;
+
+	a{
 		text-decoration: none;
-		font-size: 18px;
+		font-family: 'Do Hyeon', sans-serif;
+}
+	a:link {text-decoration: none; color: black;}
+		a:visited {text-decoration: none; color: black;}
+		a:active {text-decoration: none; color: black;}
+		a:hover {text-decoration: underline; color: black;}
+
+
+
 	}
-	
-	.logo{
-		display: inline-block;
-		margin-right: 60%;
-	}
-	.logo_1{
-		font-family: 'Nanum Pen Script', cursive;
-		font-size: 1.8em;
-		margin-left: 19px;
-		height: 10;
-		color: gray;
-		display: inline-block;
-	}
-	.logo_2{
-		font-family: 'Nanum Myeongjo', serif;
-		color: black;
-		margin: 0;
+	body,html{
+		margin:0;
 		padding: 0;
+		font-family: 'Do Hyeon', sans-serif;
 	}
-details > summary::-webkit-details-marker {
-  display: none;
-}
-
-.a{
-	width: 10%;
-	display: inline-block;
-}
-details > summary{
-	cursor: pointer;
-}
-
-hr{
-	margin:0;
-	margin-top: 10px;
 	
-}
+	header{
+		width: 100%;
+		height: 15%;
+		margin:0px;
+		padding: 0px;
+	}
+	header>#main_logo1{
+		float: left;
+		
+	}
+	
+	header>#main_logo1>p{
+		color:black;
+		font-size: 30px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		padding:0;
+	}
+	header>#main_logo2{
+		float: right;
+
+	}
+	header>#main_logo2>#_nav>form>#ham_png{
+		width: 2%;
+		float:right;
+		
+	}
+	
+	article{
+	 	width: 100%;
+		height: 70%;
+		float: left;
+	}
+	article>video{
+		max-width: 100%;
+		width:100%:
+	}
+	
 </style>
 </head>
 <body>
-	<div class = page_1>
-		<div class = header>
-		<div></div>
+<div id="all_page">
+	<header>
+		<div id="main_logo1">
+			<p>꽃을 주다</p>
+		</div>
 		
-		<div class = nav style = top:0>
-				<div class ="logo">
-				<a href="/">
-				<span class ="logo_1">꽃을 주다</span>
-				</a>
-				</div>
-				<a href="/" ><span class="logo_2">로그인</span></a>
-				<div class = "a">
-				<details class= "logo_2">
-					<summary>메뉴</summary>
-				</details>
-				</div>
+		<div id="main_logo2">
+			<!--  로그인, 검색,메뉴 -->
+			<nav id="_nav">
+			<form action="/" method="post" name="form_nav">
+			<a href="/" > 로그인</a>
+			<a href="/">검색이미지</a>
+			<input type="image" id="ham_png" src="햄버거.png"  /> <!-- 메뉴 미정이시발 -->
+			</form>
+			</nav>
 		</div>
-		</div>
-	</div>
-	<hr>
-	  <video autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted">
-			<!--  <source src="https://d1xpblio32ctey.cloudfront.net/wp-content/uploads/2020/03/26054225/VS20-DotCom-Header.mp4.mp4" type="video/mp4">-->
-			<source src ="영상.mp4" type="video/mp4">
-		</video>
-
+	</header>
+	<!-- 헤더,아티클 구분 -->
+	
+	<article>
+		<video src="Flower.mp4" >serx</video>
+	</article>
+</div>
 </body>
 </html>
